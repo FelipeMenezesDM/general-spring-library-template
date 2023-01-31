@@ -1,0 +1,9 @@
+name: Deploy maven package to GitHub Repository
+on:
+  push:
+    tags:
+     - '*'
+jobs:
+  ci-cd:
+    name: CI/CD
+    uses: felipemenezesdm/general-deploy-actions/.github/workflows/github-maven-package.yml@v1
