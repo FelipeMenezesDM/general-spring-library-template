@@ -62,5 +62,5 @@ mvn install -Drepo.usrnm="$username" -Drepo.pswd="$password"
 ## Deploy manual
 O deploy da biblioteca é realizado automaticamente sempre que houver a criação de uma nova tag de versão. Entretatando, se for necessário realizar seu deploy manual, basta executar o comando abaixo, substuindo os parâmetros por seus respectivos valores:
 ```
-mvn deploy -s settings.xml -Dpkg.version="$version" -Drepo.usrnm="$username" -Drepo.pswd="$password"
+mvn deploy -s settings.xml -Drepo.usrnm="$username" -Drepo.pswd="$password"
 ```
