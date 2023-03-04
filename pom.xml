@@ -5,7 +5,7 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>br.com.felipemenezesdm</groupId>
-    <artifactId>general-maven-library-template</artifactId>
+    <artifactId>general-spring-library-template</artifactId>
     <version>1.0.0</version>
 
     <parent>

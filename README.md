@@ -1,5 +1,5 @@
-# General Maven Library Template
-Modelo padrão para criação de bibliotecas Java (Maven)
+# General Spring Library Template
+Modelo padrão para criação de bibliotecas para Spring Boot (Maven)
 
 ## Tópicos
 - [Instalação com Maven](#instalação-com-maven)
@@ -26,7 +26,7 @@ Crie o arquivo de configuração do maven ou inclua o repositório e o servidor 
         </repository>
         <repository>
           <id>github</id>
-          <url>https://maven.pkg.github.com/felipemenezesdm/general-maven-library-template</url>
+          <url>https://maven.pkg.github.com/felipemenezesdm/general-spring-library-template</url>
           <snapshots>
             <enabled>true</enabled>
           </snapshots>
@@ -34,14 +34,6 @@ Crie o arquivo de configuração do maven ou inclua o repositório e o servidor 
       </repositories>
     </profile>
   </profiles>
-
-  <servers>
-    <server>
-      <id>github</id>
-      <username>${repo.usrnm}</username>
-      <password>${repo.pswd}</password>
-    </server>
-  </servers>
 </settings>
 ```
 
@@ -49,18 +41,30 @@ Inclua a dependência no arquivo pom:
 ```xml
 <dependency>
   <groupId>br.com.felipemenezesdm</groupId>
-  <artifactId>general-maven-library-template</artifactId>
+  <artifactId>general-spring-library-template</artifactId>
   <version>1.0.0</version>
 </dependency>
 ```
 
 Execute com comando abaixo para download de dependências, substituindo os parâmetros por seus respectivos valores:
 ```
-mvn install -Drepo.usrnm="$username" -Drepo.pswd="$password"
+mvn install
 ```
 
 ## Deploy manual
-O deploy da biblioteca é realizado automaticamente sempre que houver a criação de uma nova tag de versão. Entretatando, se for necessário realizar seu deploy manual, basta executar o comando abaixo, substuindo os parâmetros por seus respectivos valores:
-```
-mvn deploy -s settings.xml -Drepo.usrnm="$username" -Drepo.pswd="$password"
-```
+O deploy da biblioteca é realizado automaticamente sempre que houver a criação de uma nova tag de versão. Entretatando, se for necessário realizar seu deploy manual, é preciso seguir os passos abaixo:
+
+1. No settings.xml, confirmar que o servidor do GitHub está configurado:
+    ```xml
+      <servers>
+        <server>
+          <id>github</id>
+          <username>${repo.usrnm}</username>
+          <password>${repo.pswd}</password>
+        </server>
+      </servers>
+    ```
+2. Executar o comando abaixo, substuindo os parâmetros por seus respectivos valores:
+    ```
+    mvn deploy -s settings.xml -Drepo.usrnm="$username" -Drepo.pswd="$password"
+    ```
