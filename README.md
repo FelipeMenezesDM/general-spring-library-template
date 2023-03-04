@@ -46,15 +46,15 @@ Inclua a dependência no arquivo pom:
 </dependency>
 ```
 
-Execute com comando abaixo para download de dependências, substituindo os parâmetros por seus respectivos valores:
+Execute com comando abaixo para download de dependências:
 ```
 mvn install
 ```
 
 ## Deploy manual
-O deploy da biblioteca é realizado automaticamente sempre que houver a criação de uma nova tag de versão. Entretatando, se for necessário realizar seu deploy manual, é preciso seguir os passos abaixo:
+O deploy da biblioteca é realizado automaticamente sempre que houver a criação de uma nova tag de versão. Entretanto, se for necessário realizar seu deploy manual, é preciso seguir os passos abaixo:
 
-1. No settings.xml, confirmar que o servidor do GitHub está configurado:
+1. No _settings.xml_, confirmar que o servidor do GitHub está configurado:
     ```xml
       <servers>
         <server>
