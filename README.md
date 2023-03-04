@@ -66,5 +66,5 @@ O deploy da biblioteca é realizado automaticamente sempre que houver a criaçã
     ```
 2. Executar o comando abaixo, substuindo os parâmetros por seus respectivos valores:
     ```
-    mvn deploy -s settings.xml -Drepo.usrnm="$username" -Drepo.pswd="$password"
+    mvn deploy -s settings.xml -Drepo.usrnm=USERNAME -Drepo.pswd=PASSWORD
     ```
