@@ -24,7 +24,7 @@
         <repository>
             <id>github</id>
             <name>GitHub Repository</name>
-            <url>https://maven.pkg.github.com/felipemenezesdm/${artifactId}</url>
+            <url>https://maven.pkg.github.com/felipemenezesdm/${project.artifactId}</url>
         </repository>
     </distributionManagement>
 
