@@ -7,6 +7,8 @@
     <groupId>br.com.felipemenezesdm</groupId>
     <artifactId>general-spring-library-template</artifactId>
     <version>1.0.0</version>
+    <url>https://github.com/felipemenezesdm/${project.artifactId}</url>
+    <description>Repositório modelo para criação de bibliotecas java com Spring Boot e maven</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
