@@ -11,6 +11,14 @@ Crie o arquivo de configuração do maven ou inclua o repositório e o servidor 
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" 
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <servers>
+    <server>
+      <id>github</id>
+      <username>${server.github.username}</username>
+      <password>${server.github.password}</password>
+    </server>
+  </servers>
+   
   <activeProfiles>
     <activeProfile>general</activeProfile>
   </activeProfiles>
@@ -55,12 +63,12 @@ O deploy da biblioteca é realizado automaticamente sempre que houver a criaçã
       <servers>
         <server>
           <id>github</id>
-          <username>${repo.usrnm}</username>
-          <password>${repo.pswd}</password>
+          <username>${server.github.username}</username>
+          <password>${server.github.password}</password>
         </server>
       </servers>
     ```
 2. Executar o comando abaixo, substuindo os parâmetros por seus respectivos valores:
     ```
-    mvn deploy -s settings.xml -Drepo.usrnm=USERNAME -Drepo.pswd=PASSWORD
+    mvn deploy -s settings.xml -Dserver.github.username=USERNAME -Dserver.github.password=PASSWORD
     ```
