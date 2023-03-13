@@ -4,8 +4,8 @@
     <servers>
         <server>
             <id>github</id>
-            <username>${repo.usrnm}</username>
-            <password>${repo.pswd}</password>
+            <username>${server.github.username}</username>
+            <password>${server.github.password}</password>
         </server>
     </servers>
 </settings>
